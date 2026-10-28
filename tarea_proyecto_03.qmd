@@ -1,0 +1,94 @@
+---
+title: "Diversidad de estilos cerámicos en los sitios arqueológicos de Puerto Rico"
+subtitle: "Tarea de Proyecto №3"
+author: "Maybelline M. Rosario Rodríguez- 801-22-3359"
+date: today
+date-format: long
+lang: es
+format:
+  docx:
+    reference-doc: Formato_TP3.docx
+  html:
+    theme: united
+    css: uprrp-theme.css
+    embed-resources: true
+    toc: true
+    toc-title: "Índice"
+bibliography: Referencias.bib
+csl: apa-clacso.csl
+---
+
+{{< pagebreak >}}
+
+## Revisión de la literatura
+
+La cerámica es sumamente importante para comprender las sociedades precoloniales de Puerto Rico, ya que nos permite estudiar cuáles eran las prácticas culturales, las maneras de producción y las relaciones entre comunidades. Los estilos cerámicos que se han podido identificar en diferentes sitios arqueológicos también nos pueden dar información sobre los materiales que utilizaron las sociedades precoloniales a través del tiempo. Para esta investigación es importante que comparemos los estilos cerámicos en base a como fueron clasificados, documentados e interpretados por investigadores pasados. Esta revisión de literatura examina la clasificación de cerámica, la distribución de materiales y la cronología con el propósito de establecer una base para comparar la diversidad registrada entre sitios arqueológicos. 
+
+Clasificación de los estilos cerámicos 
+
+A propósitos de esta investigación es fundamentale comprender lo que constituye el concepto de estilo cerámico. @GutierrezRodriguez2009 examinan esta categoría dentro de la arqueología puertorriqueña y cuestionan las dificultades que pueden surgir cuando las clasificaciones son demasiado rígidas. Su investigación abre paso a que reconozcamos que los diferentes estilos cerámicos son herramientas útiles para organizar materiales arqueológicos, pero no necesariamente representan culturas diferentes. Este estudio es importante, ya que para comparar la diversidad entre sitios se necesita tener criterios consistentes y reconocer las limitaciones de las categorías que usamos.
+
+Además, las clasificaciones arqueológicas pueden cambiar cuando se desarrollan nuevas investigaciones o se revisan materiales estudiados anteriormente. @GutierrezRodriguez2009 destacan la necesidad de reconsiderar la manera en que las categorías estilísticas contribuyen a interpretar el registro arqueológico. Esto significa que las diferencias entre los estilos documentados pueden reflejar tanto características de los materiales como decisiones tomadas durante su identificación. Por consiguiente, considero necesario examinar cuidadosamente las denominaciones utilizadas en las fuentes antes de establecer comparaciones entre sitios.
+
+Distribución e intercambio entre comunidades
+
+La distribución de materiales cerámicos también ha contribuido a comprender las relaciones entre las sociedades del Caribe. @Siegel1991 revisa investigaciones sobre la arqueología saladoide y examina cómo los patrones de distribución han sido usados para interpretar movimientos poblacionales e interacciones regionales. En su trabajo el establece semejanzas entre materiales encontrados en distintos lugares y como estos hallazgos pueden aportar información sobre conexiones históricas entre las comunidades precoloniales. Cabe destacar que estas interpretaciones requieren considerar otras evidencias arqueológicas, porque compartir características cerámicas no necesariamente significa que haya sucedido una migración.
+
+Por otra parte, @Casale2024 estudian la producción y el intercambio cerámico entre Puerto Rico y La Española durante el 350 a 1200 EC. Mediante el uso de análisis tecnológicos y petrográficos, los investigadores examinaron características relacionadas con la fabricación de los materiales y las posibles conexiones entre las sociedades. De manera que tomando las características visibles de los objetos y como fueron producidos podemos identificar semejanzas. Además, la investigación demuestra la importancia de distinguir entre los estilos identificados y la información que ofrecen los análisis sobre manufactura e intercambio.
+
+@Kracht2026 también estudian las relaciones entre comunidades mediante el análisis de 326 fragmentos cerámicos procedentes de 12 sitios arqueológicos de Puerto Rico y sus islas adyacentes. Los autores utilizaron fluorescencia de rayos X portátil para estudiar la composición de los materiales y evaluar posibles patrones de intercambio. Al describir la identificación estilística, indican que obtuvieron clasificaciones para “about 73% of the sherds in the tested assemblage” [@Kracht2026, p. 157]. Este dato es clave, ya que demuestra que no todos los fragmentos cuentan con una identificación de estilo. Esto es una limitación importante para cualquier comparación basada en esos registros.
+
+De igual forma, la Tabla 2 de @Kracht2026 [p. 156] presenta los sitios estudiados y los estilos cerámicos asociados con sus respectivos sitios arqueológicos. Esto nos brinda una oportunidad para comparar cuántos estilos diferentes se encuentran documentados en cada lugar, aunque ese no haya sido el objetivo de los investigadores. También es pertinente señalar que la composición química y la clasificación estilística son características distintas de los materiales. Para esta investigación usaré la información sobre estilos para medir la diversidad, mientras que los resultados composicionales se usaran como contexto para interpretar los patrones que se encuentren. 
+
+Cronología cultural y coexistencia de estilos
+
+La cronología es otro factor clave para identificar la diversidad cerámica de Puerto Rico. @RodriguezRamos2023 revisan las secuencias culturales mediante fechas radiocarbónicas y modelos bayesianos. Esta revisión nos brinda una interpretación compleja de nuestra historia precolonial. Los investigadores destacan “the existence of profound cultural plurality” [@RodriguezRamos2023, p. 22], al explicar la diversidad de manifestaciones culturales documentadas en la isla. Durante la investigación se cuestiona la idea de que todos los estilos cerámicos aparecieron y desaparecieron siguiendo una sucesión completamente separada.
+
+Los resultados de @RodriguezRamos2023 también sugieren que diferentes estilos pudieron desarrollarse durante los mismos periodos. Esto puede representar un desafío si se hacen interpretaciones que utilizan cada estilo como indicador exclusivo de una etapa cultural. Además, un sitio arqueológico ocupado durante un periodo extenso podría presentar materiales correspondientes a diferentes momentos y sociedades. Por consiguiente, encontrar varios estilos en un mismo lugar no significa necesariamente que todos fueran utilizados al mismo tiempo, por lo que es fundamental estudiar la información cronológica que tenemos disponible.
+
+Similitudes y vacíos en la literatura
+
+Al comparar estas investigaciones hay un patrón importante, los materiales cerámicos nos permiten estudiar diferencias y conexiones entre las sociedades precoloniales, pero su interpretación depende de los métodos que se utilicen. @GutierrezRodriguez2009 cuestionan las clasificaciones rígidas, mientras que en la investigación de @RodriguezRamos2023 se destaca la complejidad de las relaciones cronológicas. Del mismo modo, @Siegel1991, @Casale2024 y @Kracht2026 examinan diferentes aspectos de la distribución, producción e intercambio. Aunque sus enfoques son distintos, todos contribuyen a comprender la importancia de contextualizar los estilos cerámicos antes de interpretarlos.
+
+Una limitación es que los sitios arqueológicos no necesariamente han sido excavados o documentados de la misma forma. Hay diferencias en el tamaño de las muestras y los criterios de clasificación pueden influir en el número de estilos identificados. Por esto hay que tener cuidado a la hora de interpretar datos ya que una mayor diversidad documentada no significa que un sitio tuviera más diversidad cultural que otro. Esta limitación nos lleva a considerar lo importante que es desarrollar comparaciones transparentes que reconozcan las limitaciones de los datos que tenemos disponibles.
+
+A partir de todo esto, surge la oportunidad para estudiar específicamente la variación en el número de estilos cerámicos documentados entre sitios arqueológicos. Aunque las investigaciones consultadas examinan diferentes características de la cerámica, no todas tienen como objetivo principal comparar esta medida entre sitios. Mi investigación tiene como propósito utilizar la información que ya tenemos para realizar una comparación cuantitativa descriptiva, sin establecer relaciones causales que los datos no permitan demostrar. De esta manera, buscaré responder la pregunta de cómo varía la diversidad de estilos cerámicos entre los sitios arqueológicos seleccionados de Puerto Rico.
+
+{{< pagebreak >}}
+
+## Propuesta metodológica
+
+### Pregunta de investigación
+
+La pregunta que se busca contestar en esta investigación es la siguiente: ¿Cómo varía la diversidad de estilos cerámicos entre los sitios arqueológicos de Puerto Rico? Para responderla, compararé el número de estilos cerámicos diferentes documentados en una muestra de sitios arqueológicos, utilizando información previamente recopilada en investigaciones arqueológicas. En particular, utilizaré el trabajo de @Kracht2026, titulado Accessibility and Exchange in Boriquén: Compositional Study of Ceramics in Pre-colonial Puerto Rico. En esta investigación, la diversidad se entenderá como la cantidad de estilos cerámicos diferentes registrados por sitio, sin asumir que todos estuvieron presentes durante el mismo periodo. Esta pregunta se relaciona directamente con lo que he discutido, ya que las investigaciones han examinado clasificación, cronología, composición e intercambio de la cerámica entre comunidades. A partir de estas aportaciones, propongo desarrollar un análisis cuantitativo descriptivo que permita comparar la variedad de estilos documentados entre distintos sitios. De esta manera, identificando las diferencias existentes en los registros cerámicos y reconociendo que estas también pueden estar relacionadas con los métodos de excavación y documentación utilizados.
+
+### Método de investigación
+
+Mi método de investigación será cuantitativo descriptivo, con un diseño no experimental basado en datos secundarios. El método principal que utilizaré será la investigación archivística, mediante la extracción y codificación de información de publicaciones arqueológicas. Este enfoque me va a permitir categorizar cerámica de distintos sitios utilizando registros ya existentes. Además, la investigación será de carácter inductivo, ya que buscará identificar patrones sin establecer relaciones causales.
+
+### Unidad de análisis
+
+La unidad de análisis será cada sitio arqueológico incluido en la investigación. Utilizare la presencia o ausencia de cada estilo cerámico como la medida para describir la diversidad. Además, le asiganre el valor 1 cuando un estilo esté documentado y el valor 0 únicamente cuando exista evidencia suficiente para establecer su ausencia. Cuando la fuente no permita determinar esta condición, el registro se identificará como información no determinada para evitar errores por falta de documentación.  
+
+### Población y muestreo
+
+La población de esta investigación estará constituida por los sitios arqueológicos de Puerto Rico con evidencia de materiales cerámicos precoloniales. Se utilizará un muestreo no probabilístico e intencional, seleccionando los sitios que ya están documentados. Como muestra inicial, usaré  los 12 sitios arqueológicos incluidos en @Kracht2026. A partir del inventario de fragmentos cerámicos analizados en su estudio, identificare la cantidad de estilos cerámicos distintos documentados en cada sitio. Esta medida permitirá comparar la variedad de estilos observados en los materiales analizados. Debido a que la muestra se basa en una selección previa de sitios y fragmentos cerámicos, los resultados se limitarán a los casos estudiados y no se generalizarán a todos los sitios arqueológicos de Puerto Rico.
+[Delimite su población objetivo y el procedimiento de selección de casos o participantes.]
+
+### Plan de recolección de datos
+
+Como mencione anteriormente, la fuente principal de esta investigación será el inventario suplementario Inventory and Site Info de @Kracht2026, específicamente los registros de fragmentos cerámicos y sus estilos identificados. También se utilizará la Tabla 2 de dicho estudio y @RodriguezRamos2023 como fuentes complementarias para contextualizar la cronología y las clasificaciones cerámicas. Los datos se organizarán y se registrará la presencia de cada estilo y su ausencia solo cuando haya evidencia suficiente o sea información que no se puede determinar. Para medir la variedad observada de estilos cerámicos, se calculará el número de estilos distintos identificados en los fragmentos analizados de cada sitio. Los resultados se presentarán mediante tablas, gráficas de barras y medidas descriptivas tales como el promedio, la mediana y el rango, según corresponda. No se establecerán relaciones causales, ya que el objetivo es describir las diferencias entre los sitios seleccionados. Finalmente, tomaré en cuenta las limitaciones como la cantidad de fragmentos analizados y la manera en la que se realizaron las excavaciones.    
+
+### Consideraciones éticas
+
+Para esta investigación solo se usará información previamente publicada, en cuanto a ética, evitaré divulgar información sensible que pueda poner en riesgo la conservación de los sitios arqueológicos. 
+
+## Declaración de uso de MEL
+
+Utilicé ChatGPT para unas dudas que tenía con la metodología. 
+
+## Referencias
+
+::: {#refs}
+:::
+
