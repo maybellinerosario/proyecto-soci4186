@@ -1,0 +1,200 @@
+---
+title: "Diversidad de estilos cerámicos en los sitios arqueológicos de Puerto Rico"
+subtitle: "Individual"
+author:
+  - name: "Maybelline M. Rosario Rodríguez"
+    affiliations: "801-22-3359"
+date: today
+date-format: long
+lang: es
+format:
+  docx:
+    reference-doc: Formato_TP4.docx
+    number-sections: true
+  # typst: default
+  html:
+    toc: true
+    toc-title: "Índice"
+    theme: united
+    css: uprrp-theme.css
+    embed-resources: true
+    number-sections: true
+bibliography: Referencias.bib
+csl: apa-clacso.csl
+---
+
+**SOCI 4186 — Tarea de Proyecto de Investigación Nº4: Análisis exploratorio de datos**
+
+---
+
+# Contenido del Análisis Exploratorio de Datos (AED)
+
+## Descripción de los datos
+
+```{r}
+#| label: setup
+#| message: false
+#| warning: false
+
+# Cargue las librerías necesarias
+library(tidyverse)
+library(readxl)
+
+# Cargue sus datos aquí
+# datos <- read_csv("sus_datos.csv")
+datos <- read_excel("Inventory_and_Site_Info.xlsx")
+```
+
+Este análisis exploratorio usa datos recopilados anteriormente por @Kracht2026 en un inventario cerámico que realizaron para su investigación sobre materiales arqueológicos de Puerto Rico. El archivo Inventory and Site Info contiene 328 registros correspondientes a 12 sitios arqueológicos, incluyendo información sobre su procedencia, características de las piezas y clasificaciones de estilo. Para esta investigación escogí las variables relacionadas con el sitio y el estilo cerámico, para comparar la diversidad de estilos entre los lugares estudiados. La unidad de análisis es el sitio arqueológico y la diversidad se define como la cantidad de estilos cerámicos diferentes identificados en cada sitio.
+
+
+
+```{r}
+library(stringr)
+
+datos <- datos %>%
+  mutate(
+    Sitio = str_extract(
+      `Site and Prov:`,
+      "Canas|Monserrate|Toita|Borinquén|Los Indios|Santa Elena|Esperanza|Sardinero|Santiago|Llanos Tuna|Collores|Hacienda Grande"
+    )
+  )
+
+table(datos$Sitio, useNA = "ifany")
+```
+
+```{r}
+#| include: false 
+datos <- datos %>%
+  mutate(
+    Estilo_preliminar = coalesce(
+      as.character(`ECK assignment`),
+      as.character(datos[[13]])
+    )
+  )
+
+table(datos$Estilo_preliminar, useNA = "ifany")
+```
+
+
+```{r}
+datos <- datos %>%
+  mutate(
+    Estilo_principal = case_when(
+      str_detect(Estilo_preliminar,
+        regex(" or |\\?|^Mostly", ignore_case = TRUE)) ~ NA_character_,
+      str_detect(Estilo_preliminar, "^Chica") ~ "Chica",
+      str_detect(Estilo_preliminar, "^Capa") ~ "Capa",
+      str_detect(Estilo_preliminar, "^Cuevas") ~ "Cuevas",
+      str_detect(Estilo_preliminar, "^Esperanza") ~ "Esperanza",
+      str_detect(Estilo_preliminar, "^Hacienda Grande") ~ "Hacienda Grande",
+      str_detect(Estilo_preliminar, "^Monserrate") ~ "Monserrate",
+      str_detect(Estilo_preliminar, "^Ostiones") ~ "Ostiones",
+      str_detect(Estilo_preliminar, "^Santa Elena") ~ "Santa Elena",
+      str_detect(Estilo_preliminar, "^Boca Chica") ~ "Boca Chica",
+      TRUE ~ NA_character_
+    )
+  )
+
+table(datos$Estilo_principal, useNA = "ifany")
+```
+
+```{r}
+diversidad_sitios <- datos %>%
+  group_by(Sitio) %>%
+  summarise(
+    Diversidad = n_distinct(Estilo_principal, na.rm = TRUE),
+    .groups = "drop"
+  ) %>%
+  arrange(desc(Diversidad))
+
+print(diversidad_sitios)
+```
+
+## Estadísticas descriptivas
+
+```{r}
+#| label: estadisticas-descriptivas
+
+# Incluya su código para estadísticas descriptivas
+# summary(datos)
+summary(diversidad_sitios$Diversidad)
+```
+
+Los resultados del análisis exploratorio muestran diferencias en la diversidad de estilos cerámicos entre los 12 sitios arqueológicos estudiados. El promedio es de 2.92 estilos por sitio y la mediana es de tres, mientras que los valores oscilaron entre un mínimo de uno y un máximo de cinco estilos. Hacienda Grande y Toita muestran la mayor diversidad, con cinco estilos cada uno, mientras que Borinquén, Esperanza y Sardinero registraron solamente uno. Estos resultados nos ayudan a identificar variaciones en la diversidad de estilos cerámicos entre los sitios, sin embargo, hay que tomar en cuenta los registros que no tienen clasificación y aquellos cuyas identificaciones son ambiguas.
+
+## Visualizaciones (si aplica)
+
+```{r}
+#| label: visualizaciones
+#| fig-cap: "Descripción de la figura"
+
+# Incluya su código para visualizaciones
+# ggplot(datos, aes(x = variable)) +
+#   geom_histogram()
+
+ggplot(diversidad_sitios,
+       aes(x = reorder(Sitio, Diversidad), y = Diversidad)) +
+  geom_col(fill = "steelblue") +
+  coord_flip() +
+  labs(
+    title = "Diversidad de estilos cerámicos por sitio",
+    x = "Sitio arqueológico",
+    y = "Número de estilos diferentes"
+  ) +
+  theme_minimal()
+
+```
+
+En esta gráfica se pueden ver las diferencias en la diversidad de estilos, Hacienda Grande y Toita presentan la mayor diversidad, con cinco estilos cada uno, seguidos por Canas, Monserrate y Santiago, con cuatro estilos. Por otra parte, Borinquén, Esperanza y Sardinero registran un solo estilo, lo que refleja una menor diversidad dentro del inventario analizado. Sin embargo, estos resultados no necesariamente representan la diversidad cerámica total de cada sitio, ya que las diferencias en la cantidad de registros disponibles y las clasificaciones incompletas pueden influir en los valores obtenidos.
+
+## Relaciones entre variables (si aplica)
+
+
+```{r}
+#| label: relaciones
+
+# Incluya su código para explorar relaciones
+# cor(datos$var1, datos$var2)
+```
+
+No aplica debido a que el objetivo de esta investigación es comparar de manera descriptiva la diversidad de estilos cerámicos entre los sitios arqueológicos estudiados, sin establecer relaciones causales.
+
+## Valores atípicos y datos faltantes
+
+Identifiquen cualquier caso relevante y describan cómo lo manejarán o planean manejarlo.
+
+```{r}
+#| label: valores-atipicos
+
+# Incluya su código para identificar valores atípicos y faltantes
+# sum(is.na(datos))
+table(
+  Sin_clasificacion = is.na(datos$Estilo_principal)
+)
+```
+
+Durante la revisión del inventario se identificaron 81 registros sin una asignación de estilo principal mediante el criterio de clasificación utilizado, lo que representa aproximadamente el 24.7 % de los 328 registros examinados. De estos, a 34 le falta información en ambas columnas de clasificación, mientras que los otros 47 no pudieron asignarse a un estilo principal debido a identificaciones no claras o no reconocidas por la regla que se usó. Inclui estos registros en el conjunto de datos original, pero no en el cálculo de diversidad de estilos por sitio. En cuanto a los valores atípicos, no se identificaron valores atípicos en la diversidad observada, aunque las diferencias entre sitios requieren considerar la cantidad de registros disponibles y las limitaciones de clasificación.
+
+## Resumen y conclusiones iniciales
+
+Como mencioné en el análisis pude identificar diferencias en la diversidad de estilos cerámicos entre los 12 sitios arqueológicos de Puerto Rico incluidos en el inventario. Los resultados preliminares muestran que Hacienda Grande y Toita presentan la mayor diversidad, con cinco estilos cada uno, mientras que Borinquén, Esperanza y Sardinero registran un solo estilo. En términos generales, se obtuvo un promedio de 2.92 estilos por sitio, lo que refleja variaciones descriptivas en la diversidad de cerámica en estos sitios. Por otro lado, la revisión de los 328 registros permitió reconocer limitaciones relacionadas con las clasificaciones de estilos que estaban o incompletas o no claras. Esto puede influir en la diversidad observada en los resultados, debido a esto no se deben interpretar estos datos como una representación definitiva de la diversidad cerámica de cada sitio. El siguiente paso del proyecto, sería revisar las identificaciones dudosas y considerar las diferencias en la cantidad de registros disponibles por sitio. 
+
+---
+
+# Metodología
+
+Para hacer este análisis utilize RStudio y Quarto para el procedimiento y los datos. Importé los datos de Excel usando la librería readxl, mientras que tidyverse, en específico dplyr, stringr y ggplot2, se usaron para organizar, resumir y visualizar la información. Se identificaron los sitios arqueológicos a partir de los datos de procedencia y se combinaron las columnas de clasificación cerámica, dando prioridad a la asignación ECK cuando estaba disponible. Luego, se normalizaron los nombres de los estilos principales y se excluyeron del cálculo de diversidad cerámica las clasificaciones ambiguas o no asignadas. Finalmente, se calculó la cantidad de estilos diferentes por sitio y se utilizaron estadísticas descriptivas y una gráfica de barras para comparar los resultados, sin realizar inferencias causales.
+
+---
+
+# Declaración de uso de MEL {.unnumbered}
+
+Utilice ChatGPT para ayuda con el código en algunas partes en especial en el inicio para limpiar los datos, ya que no sabía por dónde empezar. Además, lo usé para unos errores que me salieron mientras ejecutaba el código.
+
+---
+
+# Referencias {.unnumbered}
+
+::: {#refs}
+:::
